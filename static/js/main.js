@@ -25,6 +25,8 @@ $( document ).ready(function() {
     if(path.includes(pathComp)){$('body').addClass(pathMap[pathComp]);};
   }
 
+  autosize($('textarea'));
+
   setPageHeight();
 
 });
