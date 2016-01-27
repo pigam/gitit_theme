@@ -27,8 +27,8 @@ $( document ).ready(function() {
 
   autosize($('textarea'));
 
-  setPageHeight();
+  //setPageHeight();
 
 });
 
-$( window ).resize(setPageHeight); 
+//$( window ).resize(setPageHeight); 
