@@ -1,0 +1,185 @@
+$drawer-transition: 250ms
+$drawer-width: 320px
+$reusable-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 1px 5px 0px rgba(0, 0, 0, 0.12)
+
+body, html
+  margin: 0
+  padding: 0
+  font-size: 16px
+  background-color: #eeeeee
+
+#content-container-page
+  max-width: 778px
+  padding: 0.5em 16px
+  margin: auto
+  box-shadow: $reusable-shadow
+  background-color: white
+
+
+#fixed-header
+  font-family: 'Fira Sans', sans-serif
+  background-color: #283593
+  color: white
+  font-size: 24px
+  position: fixed
+  width: 100%
+  height: 1em
+  overflow: hidden
+  top: 0
+  right: 0
+  transition: width $drawer-transition
+  z-index: 100
+  padding: 16px 0px 20px 0px
+
+  a
+    text-align: center
+    width: 1em
+    padding: 0 8px
+    display: inline-block
+
+  a:link, a:visited
+    color: white
+
+  a:first-of-type
+    padding-left: 16px
+    margin-right: 8px
+    transition: margin-left $drawer-transition
+
+  #right-icons
+    float: right
+    padding-right: 8px
+
+#content-container
+  margin-top: 60px
+  transition: margin-left $drawer-transition
+
+
+// Drawer
+#drawer
+  color: #333
+  background-color: white
+  box-shadow: $reusable-shadow
+  font-family: 'Fira Sans', sans-serif
+
+  position: fixed
+  width: $drawer-width
+  height: 100%
+  padding-bottom: 1px
+  top: 0
+  left: -$drawer-width - 6px
+  overflow: hidden
+  transition: left $drawer-transition, top $drawer-transition
+  z-index: 200
+
+  #logo-container
+    max-height: 100px
+    overflow: hidden
+    text-align: center
+    background-color: #c5cae9
+
+  ul
+    padding: 0
+    margin: 16px 0
+
+    li a:link, li a:visited
+      color: rgb(33, 33, 33)
+      display: block
+      margin-top: 0.2em
+      width: 100%
+      padding: 0.5em 16px
+      text-decoration: none
+      i
+        color: #737373
+        font-size: 1.5em
+        margin-right: 20px
+        vertical-align: bottom
+
+  #searchform
+    padding: 0 16px
+    border-top: 1px solid #e6e6e6
+    
+    label
+      color: rgb(118, 118, 118)
+      font-size: 0.8em
+      padding-top: 16px
+      padding-bottom: 8px
+      display: block
+
+    input
+      background: none
+      border: none
+      border-bottom: 2px solid rgb(118, 118, 118)
+      width: calc(100% - 2em)
+      font-size: 1.2em
+
+    input:focus
+      border-color: #283593
+
+    button
+      color: #737373
+      background: none
+      border: none
+      float: right
+      font-size: 1.2em
+
+
+//Shadow behind drawer - created on document.ready
+#drawer-shadow
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  opacity: 0
+  pointer-events: none
+  background-color: black
+  z-index: 150
+  transition: opacity $drawer-transition
+
+//When drawer opens
+body.drawer-open
+  #drawer-shadow
+    opacity: 0.4
+    pointer-events: auto
+  #drawer
+    left: 0
+
+// Desktop view
+@media only screen and (min-width: 768px)
+  #drawer
+    left: 0
+    width: 280px
+    top: 60px
+    box-shadow: none
+    border-right: 1px solid #e6e6e6
+
+  body.drawer-open #drawer-shadow
+    opacity: 0
+    pointer-events: none
+  
+  #fixed-header
+    width: 100%
+
+    a:first-of-type
+      margin-left: -25px - 16px
+
+    //Hide the drawer icon
+  #content-container
+    width: calc(100% - #{$drawer-width} - 1em)
+    margin-left: 280px
+
+
+.edit-page 
+  #right-icons 
+    .edit, .new, .view
+      display: none
+
+.history-page 
+  #right-icons
+    .history, .new
+      display: none
+
+.index-page, .upload-page, .search-page
+  #right-icons
+    .history, .edit, .new, .view
+      display: none
