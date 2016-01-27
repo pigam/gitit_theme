@@ -2518,7 +2518,7 @@ body, html {
   transition: left 250ms, top 250ms;
   z-index: 200; }
   #drawer #logo-container {
-    max-height: 100px;
+    max-height: 130px;
     overflow: hidden;
     text-align: center;
     background-color: #c5cae9; }
@@ -2621,9 +2621,21 @@ body.drawer-open #drawer {
     font-family: "Cabin";
     font-weight: normal;
     margin-top: 1.5rem; }
-  #content-container-page code, #content-container-page pre, #content-container-page text-area {
+  #content-container-page code, #content-container-page pre, #content-container-page textarea {
     font-family: "Consolas", "Menlo", monospaced; }
   #content-container-page dt {
     font-weight: bold; }
+  #content-container-page dd {
+    margin-left: 1em; }
+
+textarea {
+  margin: 0px -16px;
+  width: calc(100% + 32px - 2em);
+  border: medium none;
+  display: block;
+  padding: 0.5em 1em;
+  background-color: #fdf6e3;
+  color: #586e75;
+  line-height: 1.35em; }
 
 /*# sourceMappingURL=gitit.css.map */
