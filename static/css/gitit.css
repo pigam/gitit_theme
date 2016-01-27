@@ -2610,19 +2610,27 @@ body.drawer-open #drawer {
 
 #content-container-page {
   text-rendering: optimizeLegibility;
-  line-height: 1.2em; }
+  line-height: 1.4em;
+  hyphens: auto; }
   #content-container-page a:link {
     color: #283593;
     text-decoration: none; }
   #content-container-page h1, #content-container-page h2, #content-container-page h3, #content-container-page h4, #content-container-page h5, #content-container-page h6, #content-container-page p {
     margin-top: 0;
     margin-bottom: 1rem; }
+  #content-container-page p {
+    text-justify: justify; }
   #content-container-page h1, #content-container-page h2, #content-container-page h3, #content-container-page h4, #content-container-page h5, #content-container-page h6 {
     font-family: "Cabin";
     font-weight: normal;
     margin-top: 1.5rem; }
+  #content-container-page h1:not(:first-of-type)::before, #content-container-page h2::before {
+    content: "";
+    display: block;
+    height: 68px;
+    margin: -68px 0 0; }
   #content-container-page code, #content-container-page pre, #content-container-page textarea {
-    font-family: "Consolas", "Menlo", monospaced; }
+    font-family: "Consolas", "Menlo", monospace; }
   #content-container-page dt {
     font-weight: bold; }
   #content-container-page dd {

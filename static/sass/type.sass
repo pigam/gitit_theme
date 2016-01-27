@@ -1,6 +1,7 @@
 #content-container-page
   text-rendering: optimizeLegibility
-  line-height: 1.2em
+  line-height: 1.4em
+  hyphens: auto
 
   a:link
     color: #283593
@@ -10,10 +11,21 @@
     margin-top: 0
     margin-bottom: 1rem
 
+  p
+    text-justify: justify
+
   h1, h2, h3, h4, h5, h6
     font-family: "Cabin"
     font-weight: normal
     margin-top: 1.5rem
+
+  //Try to fix offsets to headers so that the ToC work
+  h1:not(:first-of-type)::before, h2::before 
+    content: ""
+    display: block
+    height: 68px /* fixed header height*/
+    margin: -68px 0 0 /* negative fixed header height */
+
 
   code, pre, textarea
     font-family: 'Consolas', 'Menlo', monospace

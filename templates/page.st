@@ -52,7 +52,7 @@
       </div>
     </header>
 
-    <main id="content-container">
+    <main id="content-container" lang="en-GB">
       <div id="content-container-page">
         $content()$
       </div>
