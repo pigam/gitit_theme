@@ -21,7 +21,7 @@
     <!-- Sliding drawer menu -->
     <nav id="drawer">
       <div id="logo-container">
-        <img id="logo" src="http://gitit.net/img/logo.png" />
+        <img id="logo" src="$base$/img/logo.png" />
       </div>
 
       <ul>
