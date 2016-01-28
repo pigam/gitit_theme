@@ -14,7 +14,8 @@ body, html
   margin: auto
   box-shadow: $reusable-shadow
   background-color: white
-
+  transform: translate3d(0, 0, 0)
+  backface-visibility: hidden
 
 #fixed-header
   font-family: 'Fira Sans', sans-serif
@@ -30,6 +31,9 @@ body, html
   transition: width $drawer-transition
   z-index: 100
   padding: 16px 0px 20px 0px
+
+  transform: translate3d(0, 0, 0)
+  backface-visibility: hidden
 
   a
     text-align: center
@@ -70,6 +74,9 @@ body, html
   overflow: hidden
   transition: left $drawer-transition, top $drawer-transition
   z-index: 200
+
+  transform: translate3d(0, 0, 0)
+  backface-visibility: hidden
 
   #logo-container
     max-height: 130px
@@ -169,15 +176,23 @@ body.drawer-open
     margin-left: 280px
 
 
+#right-icons 
+  .view, .cancel, .save, .delete
+    display: none
+
 .edit-page 
   #right-icons 
-    .edit, .new, .view
+    .edit, .new, .history
       display: none
+    .cancel, .save, .delete
+      display: inline-block
 
 .history-page 
   #right-icons
     .history, .new
       display: none
+    .view
+      display: inline-block
 
 .index-page, .upload-page, .search-page
   #right-icons
