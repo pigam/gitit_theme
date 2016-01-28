@@ -27,6 +27,8 @@ $( document ).ready(function() {
 
   autosize($('textarea'));
 
+  $('.save').on('click',function(){$('input#update').click()})
+
   //setPageHeight();
 
 });

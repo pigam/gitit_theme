@@ -46,9 +46,13 @@
       <span id="wikititle">$wikititle$</span>
 
       <div id="right-icons">
+          <a class="delete" href="$base$/_delete$pageUrl$"><i class="fa fa-trash"></i></a>
           <a class="history" href="$base$/_history$pageUrl$"><i class="fa fa-clock-o"></i></a>
           <a class="view" href="$base$$pageUrl$"><i class="fa fa-eye"></i></a>
           <a class="edit" href="$base$/_edit$pageUrl$"><i class="fa fa-pencil"></i></a>
+
+          <a class="cancel" href="$base$$pageUrl$"><i class="fa fa-close"></i></a>
+          <a class="save" href="#"><i class="fa fa-check"></i></a>
       </div>
     </header>
 
