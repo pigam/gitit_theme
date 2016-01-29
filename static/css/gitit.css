@@ -2603,7 +2603,7 @@ body.drawer-open #drawer {
       margin-left: -41px; }
 
   #content-container {
-    width: calc(100% - 320px - 1em);
+    width: calc(100% - 280px);
     margin-left: 280px; } }
 #right-icons .view, #right-icons .cancel, #right-icons .save, #right-icons .delete {
   display: none; }
