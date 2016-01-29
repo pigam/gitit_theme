@@ -1,14 +1,18 @@
 #content-container-page
   text-rendering: optimizeLegibility
-  font: 11pt/2em "Merriweather", Georgia, serif
+  font: 11pt/1.8em "Merriweather", Georgia, serif
 
   a:link
     color: #283593
     text-decoration: none
 
-  h1, h2, h3, h4, h5, h6, p
+  h1, h2, h3, h4, h5, h6
+    margin-top: 1.2em
+    margin-bottom: 0.5rem
+
+  p
     margin-top: 0
-    margin-bottom: 1rem
+    margin-bottom: 0.8rem
 
   p
     hyphens: auto
@@ -20,14 +24,13 @@
   h1, h2, h3, h4, h5, h6
     font-family: "Cabin"
     font-weight: normal
-    margin-top: 1.5rem
 
   //Try to fix offsets to headers so that the ToC work
-  h1:not(:first-of-type)::before, h2::before 
+  h1:not(:first-of-type)::before, h2::before, h3::before, h4::before 
     content: ""
     display: block
     height: 68px /* fixed header height*/
-    margin: -68px 0 0 /* negative fixed header height */
+    margin-top: -68px
 
 
   code, pre, textarea
