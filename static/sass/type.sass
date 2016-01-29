@@ -1,7 +1,6 @@
 #content-container-page
   text-rendering: optimizeLegibility
-  line-height: 1.4em
-  hyphens: auto
+  font: 11pt/2em "Merriweather", Georgia, serif
 
   a:link
     color: #283593
@@ -12,7 +11,11 @@
     margin-bottom: 1rem
 
   p
+    hyphens: auto
     text-justify: justify
+    //Switch off old-style numerals (onum) because I don't really like them
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 0, "dlig" 0
+
 
   h1, h2, h3, h4, h5, h6
     font-family: "Cabin"
@@ -29,6 +32,9 @@
 
   code, pre, textarea
     font-family: 'Consolas', 'Menlo', monospace
+
+  code
+    overflow: scroll
 
   dt
     font-weight: bold

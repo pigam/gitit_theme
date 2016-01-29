@@ -2623,8 +2623,7 @@ body.drawer-open #drawer {
 
 #content-container-page {
   text-rendering: optimizeLegibility;
-  line-height: 1.4em;
-  hyphens: auto; }
+  font: 11pt/2em "Merriweather", Georgia, serif; }
   #content-container-page a:link {
     color: #283593;
     text-decoration: none; }
@@ -2632,7 +2631,9 @@ body.drawer-open #drawer {
     margin-top: 0;
     margin-bottom: 1rem; }
   #content-container-page p {
-    text-justify: justify; }
+    hyphens: auto;
+    text-justify: justify;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 0, "lnum" 0, "dlig" 0; }
   #content-container-page h1, #content-container-page h2, #content-container-page h3, #content-container-page h4, #content-container-page h5, #content-container-page h6 {
     font-family: "Cabin";
     font-weight: normal;
@@ -2644,6 +2645,8 @@ body.drawer-open #drawer {
     margin: -68px 0 0; }
   #content-container-page code, #content-container-page pre, #content-container-page textarea {
     font-family: "Consolas", "Menlo", monospace; }
+  #content-container-page code {
+    overflow: scroll; }
   #content-container-page dt {
     font-weight: bold; }
   #content-container-page dd {

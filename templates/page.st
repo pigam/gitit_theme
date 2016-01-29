@@ -7,6 +7,8 @@
     <title>$pagetitle$ - $wikititle$</title>
 
     <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cabin:400,500' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
     <link href="$base$/css/gitit.css" rel="stylesheet" media="screen, projection" type="text/css" />
 
