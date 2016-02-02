@@ -2664,4 +2664,7 @@ textarea {
   color: #586e75;
   line-height: 1.35em; }
 
+input#sha1 {
+  display: none; }
+
 /*# sourceMappingURL=gitit.css.map */
