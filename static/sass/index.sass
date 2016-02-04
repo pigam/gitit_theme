@@ -1,0 +1,35 @@
+ul.index, a.updir
+  font-family: 'Fira Sans', sans-serif
+
+a.updir:first-of-type::before
+  content: "\f015"
+  font: normal normal normal 1em/1 FontAwesome
+
+ul.index
+  list-style-type: none
+  padding: 0
+  margin: 0
+
+  font-size: 1rem
+
+  li
+    width: 100%
+    margin: none
+
+    a
+      width: 100%
+      display: block
+      height: 2.5em
+      padding: 0.7em 0
+
+  li.folder a::before
+    content: "\f07b"
+    font: normal normal normal 2.2em/1 FontAwesome
+    margin-right: 1rem
+    vertical-align: middle
+
+  li.page a::before
+    content: "\f0f6"
+    font: normal normal normal 2.2em/1 FontAwesome
+    margin-right: 1rem
+    vertical-align: middle
