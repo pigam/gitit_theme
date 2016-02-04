@@ -15,12 +15,12 @@ ul.index
   li
     width: 100%
     margin: none
+    display: block
 
-    a
-      width: 100%
+    a:first-of-type
       display: block
       height: 2.5em
-      padding: 0.7em 0
+      padding: 0.7em 2em 0.7em 0
 
   li.folder a::before
     content: "\f07b"
@@ -33,3 +33,13 @@ ul.index
     font: normal normal normal 2.2em/1 FontAwesome
     margin-right: 1rem
     vertical-align: middle
+
+  li.upload a:first-of-type::before
+    content: "\f019"
+    font: normal normal normal 2.2em/1 FontAwesome
+    margin-right: 1rem
+    vertical-align: middle
+
+  //Delete link
+  li.upload a:last-of-type
+    display: none
