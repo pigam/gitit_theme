@@ -2,6 +2,10 @@ $drawer-transition: 250ms
 $drawer-width: 320px
 $reusable-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 1px 5px 0px rgba(0, 0, 0, 0.12)
 
+@mixin hwaccel
+  transform: translate3d(0, 0, 0)
+  backface-visibility: hidden
+
 body, html
   margin: 0
   padding: 0
@@ -9,15 +13,15 @@ body, html
   background-color: #eeeeee
 
 #content-container-page
+  @include hwaccel
   max-width: 778px
   padding: 0.5em 16px
   margin: auto
   box-shadow: $reusable-shadow
   background-color: white
-  transform: translate3d(0, 0, 0)
-  backface-visibility: hidden
 
 #fixed-header
+  @include hwaccel
   font-family: 'Fira Sans', sans-serif
   background-color: #283593
   color: white
@@ -31,9 +35,6 @@ body, html
   transition: width $drawer-transition
   z-index: 100
   padding: 16px 0px 20px 0px
-
-  transform: translate3d(0, 0, 0)
-  backface-visibility: hidden
 
   a
     text-align: center
@@ -60,6 +61,8 @@ body, html
 
 // Drawer
 #drawer
+  @include hwaccel
+
   color: #333
   background-color: white
   box-shadow: $reusable-shadow
@@ -70,13 +73,10 @@ body, html
   height: 100%
   padding-bottom: 1px
   top: 0
-  left: -$drawer-width - 6px
+  transform: translateX(-$drawer-width - 6px)
   overflow: hidden
-  transition: left $drawer-transition, top $drawer-transition
+  transition: transform $drawer-transition
   z-index: 200
-
-  transform: translate3d(0, 0, 0)
-  backface-visibility: hidden
 
   #logo-container
     max-height: 130px
@@ -132,6 +132,7 @@ body, html
 
 //Shadow behind drawer - created on document.ready
 #drawer-shadow
+  @include hwaccel
   position: fixed
   width: 100%
   height: 100%
@@ -149,14 +150,14 @@ body.drawer-open
     opacity: 0.4
     pointer-events: auto
   #drawer
-    left: 0
+    transform: translateX(0)
 
 // Desktop view
 @media only screen and (min-width: 768px)
   #drawer
-    left: 0
-    width: 280px
-    top: 60px
+    transform: translateX(0)
+    transform: translateY(60px)
+    width: 280px //Breaks GPU acceleration
     box-shadow: none
     border-right: 1px solid #e6e6e6
 
