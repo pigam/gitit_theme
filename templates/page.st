@@ -9,8 +9,10 @@
     <link rel="icon" type="image/png" href="$base$/favicon.png" />
 
     <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Bitter:400,400i,700&amp;subset=latin-ext' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700&amp;subset=latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=PT+Mono&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+
 
     <link href="$base$/css/gitit.css" rel="stylesheet" media="screen, projection" type="text/css" />
 
