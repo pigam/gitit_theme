@@ -2457,171 +2457,6 @@ caption {
 .fa-percent:before {
   content: "\f295"; }
 
-body, html {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  background-color: #eeeeee; }
-
-#content-container-page {
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  max-width: 778px;
-  padding: 0.5em 16px;
-  margin: auto;
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-  background-color: white; }
-
-#fixed-header {
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  font-family: "Fira Sans", sans-serif;
-  background-color: #283593;
-  color: white;
-  font-size: 24px;
-  position: fixed;
-  width: 100%;
-  height: 1em;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  transition: width 250ms;
-  z-index: 100;
-  padding: 16px 0px 20px 0px; }
-  #fixed-header a {
-    text-align: center;
-    width: 1em;
-    padding: 0 8px;
-    display: inline-block; }
-  #fixed-header a:link, #fixed-header a:visited {
-    color: white; }
-  #fixed-header a:first-of-type {
-    padding-left: 16px;
-    margin-right: 8px;
-    transition: margin-left 250ms; }
-  #fixed-header #right-icons {
-    float: right;
-    padding-right: 8px; }
-
-#content-container {
-  margin-top: 60px;
-  transition: margin-left 250ms; }
-
-#drawer {
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  color: #333;
-  background-color: white;
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-  font-family: "Fira Sans", sans-serif;
-  position: fixed;
-  width: 320px;
-  height: 100%;
-  padding-bottom: 1px;
-  top: 0;
-  transform: translate3d(-326px, 0px, 0);
-  overflow: hidden;
-  transition: transform 250ms;
-  z-index: 200; }
-  #drawer #logo-container {
-    max-height: 130px;
-    overflow: hidden;
-    text-align: center;
-    background-color: #c5cae9; }
-  #drawer ul {
-    padding: 0;
-    margin: 16px 0; }
-    #drawer ul li a:link, #drawer ul li a:visited {
-      color: #212121;
-      display: block;
-      margin-top: 0.2em;
-      width: 100%;
-      padding: 0.5em 16px;
-      text-decoration: none; }
-      #drawer ul li a:link i, #drawer ul li a:visited i {
-        color: #737373;
-        font-size: 1.5em;
-        margin-right: 20px;
-        vertical-align: bottom; }
-  #drawer #searchform {
-    padding: 0 16px;
-    border-top: 1px solid #e6e6e6; }
-    #drawer #searchform label {
-      color: #767676;
-      font-size: 0.8em;
-      padding-top: 16px;
-      padding-bottom: 8px;
-      display: block; }
-    #drawer #searchform input {
-      background: none;
-      border: none;
-      border-bottom: 2px solid #767676;
-      width: calc(100% - 2em);
-      font-size: 1.2em; }
-    #drawer #searchform input:focus {
-      border-color: #283593; }
-    #drawer #searchform button {
-      color: #737373;
-      background: none;
-      border: none;
-      float: right;
-      font-size: 1.2em; }
-
-#drawer-shadow {
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  pointer-events: none;
-  background-color: black;
-  z-index: 150;
-  transition: opacity 250ms; }
-
-body.drawer-open #drawer-shadow {
-  opacity: 0.4;
-  pointer-events: auto; }
-body.drawer-open #drawer {
-  transform: translate3d(0px, 0px, 0); }
-
-@media only screen and (min-width: 768px) {
-  #drawer, body.drawer-open #drawer {
-    transform: translate3d(0px, 60px, 0);
-    width: 280px;
-    box-shadow: none;
-    border-right: 1px solid #e6e6e6; }
-
-  body.drawer-open #drawer-shadow {
-    opacity: 0;
-    pointer-events: none; }
-
-  #fixed-header {
-    width: 100%; }
-    #fixed-header a:first-of-type {
-      margin-left: -41px; }
-
-  #content-container {
-    width: calc(100% - 280px);
-    margin-left: 280px; } }
-#right-icons .view, #right-icons .cancel, #right-icons .save, #right-icons .delete {
-  display: none; }
-
-.edit-page #right-icons .edit, .edit-page #right-icons .new, .edit-page #right-icons .history {
-  display: none; }
-.edit-page #right-icons .cancel, .edit-page #right-icons .save, .edit-page #right-icons .delete {
-  display: inline-block; }
-
-.history-page #right-icons .history, .history-page #right-icons .new {
-  display: none; }
-.history-page #right-icons .view {
-  display: inline-block; }
-
-.index-page #right-icons .history, .index-page #right-icons .edit, .index-page #right-icons .new, .index-page #right-icons .view, .upload-page #right-icons .history, .upload-page #right-icons .edit, .upload-page #right-icons .new, .upload-page #right-icons .view, .search-page #right-icons .history, .search-page #right-icons .edit, .search-page #right-icons .new, .search-page #right-icons .view {
-  display: none; }
-
 #content-container-page {
   text-rendering: optimizeLegibility;
   font: 12pt/1.8em "PT Serif", Georgia, serif;
@@ -2712,4 +2547,17 @@ ul.index {
   ul.index li.upload a:last-of-type {
     display: none; }
 
-/*# sourceMappingURL=gitit.css.map */
+#drawer {
+  display: none; }
+
+header {
+  display: none; }
+
+#content-container-page {
+  background-color: none;
+  color: black; }
+  #content-container-page a:link {
+    color: black;
+    border-bottom: 1px dashed #ddd; }
+
+/*# sourceMappingURL=gitit-print.css.map */

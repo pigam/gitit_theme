@@ -15,6 +15,7 @@
 
 
     <link href="$base$/css/gitit.css" rel="stylesheet" media="screen, projection" type="text/css" />
+    <link href="$base$/css/gitit-print.css" rel="stylesheet" media="print" type="text/css" />
 
     <script src="$base$/js/jquery-2.2.0.min.js"></script>
     <script src="$base$/js/autosize.min.js"></script>
