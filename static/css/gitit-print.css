@@ -2556,7 +2556,7 @@ header {
 #content-container-page {
   background-color: none;
   color: black; }
-  #content-container-page a:link {
+  #content-container-page a:link, #content-container-page a:visited, #content-container-page a:active {
     color: black;
     border-bottom: 1px dashed #ddd; }
 
