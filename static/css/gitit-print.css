@@ -2560,4 +2560,19 @@ header {
     color: black;
     border-bottom: 1px dashed #ddd; }
 
+a[href^='http://']:after, a[href^='https://']:after {
+  content: " (" attr(href) ")";
+  font-size: 80%; }
+
+h1, h2, h3, h4, h5, h6 {
+  page-break-after: avoid;
+  page-break-inside: avoid; }
+
+h1 + p, h2 + p, h3 + p {
+  page-break-before: avoid; }
+
+p {
+  orphans: 3;
+  widows: 3; }
+
 /*# sourceMappingURL=gitit-print.css.map */
